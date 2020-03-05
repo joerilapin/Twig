@@ -3,7 +3,7 @@
 namespace App\Controller;
 
 use App\Entity\Capitalize;
-use App\Entity\SpacesToDashes;
+use App\Entity\Spacedash;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
 
@@ -21,7 +21,7 @@ class HomeController extends AbstractController
             $_POST['sentence2'] = "";
         }
         $capitalization = new Capitalize();
-        $dashes = new SpacesToDashes();
+        $dashes = new Spacedash();
         return $this->render('home/index.html.twig', [
             'controller_name' => 'HomeController',
             'sentence' => $capitalization->transform($_POST['sentence']),

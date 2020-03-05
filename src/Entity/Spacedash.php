@@ -4,7 +4,7 @@
 namespace App\Entity;
 
 
-class SpacesToDashes implements transform
+class Spacedash implements transform
 {
     public function transform(string $input) : string
     {
